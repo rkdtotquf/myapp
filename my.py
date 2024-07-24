@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import koreanize-matplotlib
+import koreanize_matplotlib
 
 # CSV 파일 경로
 file_path = '202406_202406_연령별인구현황_월간.csv'
@@ -21,8 +21,8 @@ region_data = data[data['행정구역'] == selected_region]
 
 # 초등학생 연령대의 인구수 계산 (6세부터 12세)
 elementary_school_population = region_data[['2024년06월_계_6세', '2024년06월_계_7세', '2024년06월_계_8세',
-                                             '2024년06월_계_9세', '2024년06월_계_10세', '2024년06월_계_11세',
-                                             '2024년06월_계_12세']].sum(axis=1).values[0]
+                                            '2024년06월_계_9세', '2024년06월_계_10세', '2024년06월_계_11세',
+                                            '2024년06월_계_12세']].sum(axis=1).values[0]
 
 # 총인구수
 total_population = int(region_data['2024년06월_계_총인구수'].str.replace(',', '').values[0])
