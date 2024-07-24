@@ -28,8 +28,7 @@ fig, ax = plt.subplots()
 ax.bar(['남자', '여자'], [male_population, female_population], color=['blue', 'pink'])
 ax.set_ylabel('인구수')
 ax.set_title(f'{selected_region}의 남자와 여자 비율')
+streamlit run streamlit_app.py
 
 # 그래프 출력
 st.pyplot(fig)
-
-streamlit run streamlit_app.py
